@@ -38,8 +38,8 @@ if st.button("Analyze"):
         close = data["Close"]
 
         # Stats
-        current_price = close.iloc[-1]
-        start_price = close.iloc[0]
+        current_price = float(close.iloc[-1])
+        start_price = float(close.iloc[0])
         pct_change = ((current_price - start_price) / start_price) * 100
 
         st.subheader(ticker.upper())
